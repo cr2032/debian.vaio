@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# /home/topicboy/.bash_aliases
+
+## function
+### date [YYYY-MM-DD HH:mm:SS]
+	now ()
+	{
+		date '+%F %T'
+	}
+
+### mkdir + cd into di
+	mkcd ()
+	{
+		mkdir -p -- "$1";
+		cd -P -- "$1"
+	}
+
+### git add + commit -m (arg+date+time) + push
+	gogit ()
+	{
+		stamp="$1 $(now)"
+		git add .;
+		git commit . -m "$stamp";
+		git push
+		echo "STAMP = $stamp"
+	}
+
+### find (name) /
+	locate ()
+	{
+		find / -name "$1"
+	}
+
+## path
+export PATH=/home/topicboy/Scripts:$PATH
+
+## aliases
+alias cdgh='cd ~/Git/github'
+alias cdbb='cd ~/Git/bitbucket'
+alias cds='cd ~/Scripts'
+alias cd..="cd .."
+alias ..="cd .."
+
+alias rm='rm -i'
+alias mkdir="mkdir -pv"
+

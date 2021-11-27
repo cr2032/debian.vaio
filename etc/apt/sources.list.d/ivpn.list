@@ -1,0 +1,2 @@
+#IVPN packages for debian generic
+deb [arch=amd64 signed-by=/usr/share/keyrings/ivpn-archive-keyring.gpg] https://repo.ivpn.net/stable/debian ./generic main
